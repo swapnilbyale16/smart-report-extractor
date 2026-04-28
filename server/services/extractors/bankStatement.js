@@ -6,7 +6,7 @@ export function extractBankStatementFields(text) {
     closingBalance:  matchPattern(text, /closing\s*balance\s*[:\-]?\s*\$?\s*([0-9,]+\.?[0-9]*)/i),
     totalCredits:    matchPattern(text, /total\s*credits?\s*[:\-]?\s*\$?\s*([0-9,]+\.?[0-9]*)/i),
     totalDebits:     matchPattern(text, /total\s*debits?\s*[:\-]?\s*\$?\s*([0-9,]+\.?[0-9]*)/i),
-    // Improved — stops at newline, avoids grabbing extra words
+  
     bankName:        matchPattern(text, /^([A-Z][A-Za-z\s]+(?:Bank|Financial|Credit Union))/m),
   };
 }
